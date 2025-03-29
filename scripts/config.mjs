@@ -1,6 +1,6 @@
 import { copyFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { parse } from 'dotenv'
-// import { sassPlugin } from 'esbuild-sass-plugin'
+import { sassPlugin } from 'esbuild-sass-plugin'
 
 /** @type {import('esbuild').BuildOptions} */
 export const commonOptions = {
@@ -19,9 +19,9 @@ export const commonOptions = {
   target: ['es2018'],
   conditions: ['main'],
   plugins: [
-    /*sassPlugin({
+    sassPlugin({
       quietDeps: true,
-    }),*/
+    }),
   ],
 }
 
