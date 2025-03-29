@@ -1,0 +1,12 @@
+/vendor
+/node_modules
+.env.php
+.env.test.php
+.phpunit.result.cache
+*.sublime-*
+phpcs.xml
+phpstan.neon
+phpunit.xml
+*.db
+.idea/
+resources/dist/
