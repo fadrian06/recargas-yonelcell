@@ -2,7 +2,7 @@
   "name": "faslatam/flighravel",
   "type": "project",
   "description": "A simple FlightPHP with Laravel folders template + PHP tooling + GH Actions",
-  "license": "MIT",
+  "license": "proprietary",
   "require": {
     "php": "^8.2",
     "ext-pdo": "*",
