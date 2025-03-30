@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use flight\Container;
+use flight\template\View;
 use Symfony\Component\Dotenv\Dotenv;
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -32,9 +33,9 @@ $container->singleton(PDO::class, static fn(): PDO => new PDO(
   $_ENV['DB_PASSWORD'] ?? null,
 ));
 
+$container->singleton(View::class, Flight::view());
+
 Flight::registerContainerHandler($container->get(...));
-
-Flight::set('flight.views.path', 'resources/views');
+Flight::view()->path = __DIR__ . '/resources/views';
 Flight::view()->preserveVars = false;
-
 Flight::start();
